@@ -1,6 +1,8 @@
 import React from "react";
 import kimgflight from "../images/flightimg/kimgflight.webp";
 import flightwithpiolet from "../images/flightimg/flightwithpiolet.jpg";
+import homeflightimg2 from "../images/flightimg/homeflightimg2.jpg";
+
 import { motion } from "framer-motion";
 
 const Home = () => {
@@ -48,7 +50,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0, rotate: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <img src={kimgflight} alt="New Flight" className="w-full h-full object-cover" />
+            <img src={homeflightimg2} alt="New Flight" className="w-full h-full object-cover" />
           </motion.div>
 
           <motion.div

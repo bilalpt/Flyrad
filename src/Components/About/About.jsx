@@ -45,7 +45,7 @@ const About = () => {
 
         {/* Content Section */}
         <motion.div
-          className="md:w-1/2 flex flex-col justify-center text-left p-4 bg-gradient-to-r -[#1e347d] to-[#7686aa] bg-opacity-20 rounded-2xl "
+          className="md:w-1/2 flex flex-col justify-center text-left p-4  bg-gradient-to-r -[#1e347d] to-[#7686aa] bg-opacity-20 rounded-2xl text-[#2f2d2d]"
           initial={{ opacity: 0, x: 100 }}
           animate={inView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
