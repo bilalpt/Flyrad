@@ -5,15 +5,29 @@ import Flyradnewlogochanges3 from "../images/Logo/Flyradnewlogochanges3.svg";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-    document.body.style.overflow = isOpen ? "auto" : "hidden"; // Prevent overflow when menu is open
+    document.body.style.overflow = isOpen ? "auto" : "hidden"; // Prevent scrolling when menu is open
   };
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+
+      // Get all section elements
+      const sections = document.querySelectorAll("section");
+      let currentSection = "";
+
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 100 && rect.bottom >= 100) {
+          currentSection = section.id;
+        }
+      });
+
+      setActiveSection(currentSection);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -45,7 +59,9 @@ const Navbar = () => {
               <a
                 key={item}
                 href={`#${sectionId}`}
-                className="px-4 py-2 text-white hover:text-white transition-all duration-300 rounded-md"
+                className={`px-4 py-2 text-white hover:text-white transition-all duration-300 rounded-md ${
+                  activeSection === sectionId ? "bg-white text-[#1e347d] font-bold" : ""
+                }`}
               >
                 {item}
               </a>
@@ -55,19 +71,21 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden flex-1 flex justify-end z-50 relative">
-          <button
-            onClick={toggleMenu}
-            className="text-[#1e347d] transition-all duration-300"
-          >
-            {isOpen ? <FiX size={28} /> : <FiMenu size={28} />}
-          </button>
+          {!isOpen && (
+            <button
+              onClick={toggleMenu}
+              className="text-[#1e347d] transition-all duration-300"
+            >
+              <FiMenu size={28} />
+            </button>
+          )}
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu (Right Sidebar) */}
       <div
-        className={`fixed top-0 left-0 w-full h-screen bg-white shadow-md transition-transform duration-300 ${
-          isOpen ? "translate-y-0" : "-translate-y-full"
+        className={`fixed top-0 right-0 w-64 h-screen bg-white shadow-md transition-transform duration-300 ${
+          isOpen ? "translate-x-0" : "translate-x-full"
         } flex flex-col items-center justify-center z-40`}
       >
         <button
@@ -86,7 +104,9 @@ const Navbar = () => {
                 key={item}
                 onClick={() => setIsOpen(false)} // Close menu on click
                 href={`#${sectionId}`}
-                className="text-xl text-black hover:bg-[#1e347d] hover:text-white transition-all duration-300 px-6 py-3 rounded-md"
+                className={`text-xl text-black hover:bg-[#1e347d] hover:text-white transition-all duration-300 px-6 py-3 rounded-md ${
+                  activeSection === sectionId ? "bg-[#1e347d] text-white font-bold" : ""
+                }`}
               >
                 {item}
               </a>
