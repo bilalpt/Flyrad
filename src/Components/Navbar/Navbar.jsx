@@ -6,7 +6,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+    document.body.style.overflow = isOpen ? "auto" : "hidden"; // Prevent overflow when menu is open
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,7 +21,11 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed w-full z-20 bg-gradient-to-r from-[#a8b5d5] to-[#1e347d] shadow-md transition-all duration-300 ${isScrolled ? "py-1" : "py-2"}`}>
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-[#a8b5d5] to-[#1e347d] shadow-md transition-all duration-300 ${
+        isScrolled ? "py-1" : "py-2"
+      }`}
+    >
       <div className="container mx-auto flex items-center px-4 md:px-6 lg:px-24 py-2">
         {/* Logo */}
         <div className="flex-1 flex items-center">
@@ -47,16 +54,30 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden flex-1 flex justify-end z-20 relative">
-          <button onClick={toggleMenu} className="text-[#1e347d] transition-all duration-300">
+        <div className="md:hidden flex-1 flex justify-end z-50 relative">
+          <button
+            onClick={toggleMenu}
+            className="text-[#1e347d] transition-all duration-300"
+          >
             {isOpen ? <FiX size={28} /> : <FiMenu size={28} />}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
-      <div className={`absolute top-full left-0 w-full bg-white shadow-md transition-all duration-300 ${isOpen ? "block" : "hidden"}`}>
-        <div className="flex flex-col space-y-2 p-4">
+      <div
+        className={`fixed top-0 left-0 w-full h-screen bg-white shadow-md transition-transform duration-300 ${
+          isOpen ? "translate-y-0" : "-translate-y-full"
+        } flex flex-col items-center justify-center z-40`}
+      >
+        <button
+          onClick={toggleMenu}
+          className="absolute top-5 right-5 text-[#1e347d] text-2xl"
+        >
+          <FiX />
+        </button>
+
+        <div className="flex flex-col space-y-6 text-center">
           {["Home", "About", "Services", "Contact"].map((item) => {
             let sectionId = item.toLowerCase();
             if (item === "Contact") sectionId = "aviationform"; // Contact → AviationForm
@@ -65,7 +86,7 @@ const Navbar = () => {
                 key={item}
                 onClick={() => setIsOpen(false)} // Close menu on click
                 href={`#${sectionId}`}
-                className="px-4 py-2 text-black hover:bg-[#1e347d] hover:text-white transition-all duration-300 rounded-md"
+                className="text-xl text-black hover:bg-[#1e347d] hover:text-white transition-all duration-300 px-6 py-3 rounded-md"
               >
                 {item}
               </a>

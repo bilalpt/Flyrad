@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { School, Briefcase, Users } from "lucide-react"; // Importing standard icons
 
 const Features = () => {
   return (
@@ -8,7 +9,7 @@ const Features = () => {
       <h2 className="text-2xl font-bold text-center mb-6 pt-10 bg-gradient-to-r from-[#1e347d] to-[#7686aa] bg-clip-text text-transparent">
         Explore Endless Opportunities in Aviation with Flyrad
       </h2>
-      <p className="text-center text-gray-800 max-w-4xl mb-10 pt-4">
+      <p className="text-center text-gray-800 max-w-4xl mb-10  text-xl  font-sans ">
         At Flyrad Aviation, we specialize in providing an unmatched network of
         educational resources, training centers, and job opportunities in the
         aviation industry across India. Whether you’re looking for pilot
@@ -33,7 +34,7 @@ const Features = () => {
             <h3 className="text-lg font-semibold mb-2 bg-gradient-to-r from-[#1e347d] to-[#7686aa] bg-clip-text text-transparent">
               {feature.title}
             </h3>
-            <p className="text-gray-700 text-sm">{feature.description}</p>
+            <p className="text-gray-700 text-md">{feature.description}</p>
           </motion.div>
         ))}
       </div>
@@ -43,64 +44,19 @@ const Features = () => {
 
 const features = [
   {
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-10 w-10 text-[#1e347d]"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth="2"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M3 10h11M9 21V3m0 0l6 6m-6-6L3 9m0 0h6m0 0v12m0-12l6 6"
-        />
-      </svg>
-    ),
+    icon: <School className="h-10 w-10 text-[#1e347d]" />, // Standard education icon
     title: "Comprehensive Directory of Aviation Schools and Academies",
     description:
       "Explore top-rated institutions and courses tailored to kickstart your journey in the aviation sector.",
   },
   {
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-10 w-10 text-[#1e347d]"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth="2"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M12 11c0-2.21-1.79-4-4-4S4 8.79 4 11m16 0c0-2.21-1.79-4-4-4s-4 1.79-4 4m4-4v12m-4-12v12m-4-12v12M4 21h16"
-        />
-      </svg>
-    ),
+    icon: <Briefcase className="h-10 w-10 text-[#1e347d]" />, // Standard job icon
     title: "Exclusive Job Portal",
     description:
       "Access our extensive job board featuring aviation roles from airlines, airports, and related sectors across India.",
   },
   {
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-10 w-10 text-[#1e347d]"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth="2"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M9 17v-4m6 4v-4M3 21h18M4 10l8-6 8 6M4 10v11h16V10"
-        />
-      </svg>
-    ),
+    icon: <Users className="h-10 w-10 text-[#1e347d]" />, // Standard community icon
     title: "A Community Focused on Growth and Success",
     description:
       "Join like-minded individuals and industry experts who are passionate about aviation. Receive guidance, support, and mentorship.",

@@ -17,16 +17,12 @@ const MissionVision = () => {
         className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-6"
       >
         {/* Mission Section */}
-        <motion.div className="bg-white p-8 rounded-lg shadow-lg" variants={fadeInUp}>
-          <div className="flex flex-col items-center">
-            <motion.div
-              className="text-4xl"
-              whileHover={{ scale: 1.2 }}
-              transition={{ duration: 0.3 }}
-            >
-              🎯
-            </motion.div>
-            <h2 className="text-3xl font-bold mt-4 bg-gradient-to-r from-[#1e347d] to-[#7686aa] text-transparent bg-clip-text">
+        <motion.div
+          className="bg-white p-8 rounded-lg shadow-lg"
+          variants={fadeInUp}
+        >
+          <div className="text-center">
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-[#1e347d] to-[#7686aa] text-transparent bg-clip-text">
               Our Mission
             </h2>
           </div>
@@ -56,16 +52,12 @@ const MissionVision = () => {
         </motion.div>
 
         {/* Vision Section */}
-        <motion.div className="bg-white p-8 rounded-lg shadow-lg" variants={fadeInUp}>
-          <div className="flex flex-col items-center">
-            <motion.div
-              className="text-4xl"
-              whileHover={{ scale: 1.2 }}
-              transition={{ duration: 0.3 }}
-            >
-              👁️
-            </motion.div>
-            <h2 className="text-3xl font-bold mt-4 bg-gradient-to-r from-[#1e347d] to-[#7686aa] text-transparent bg-clip-text">
+        <motion.div
+          className="bg-white p-8 rounded-lg shadow-lg"
+          variants={fadeInUp}
+        >
+          <div className="text-center">
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-[#1e347d] to-[#7686aa] text-transparent bg-clip-text">
               Our Vision
             </h2>
           </div>

@@ -23,7 +23,7 @@ function App() {
       <MissionVision/> 
       <Services/>
       <AviationForm/>
-      <FloatingButtons/>
+      {/* <FloatingButtons/> */}
 
 
     </div>

@@ -7,9 +7,9 @@ import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <div id="home" className="w-full h-[100vh] md:min-h-[95vh] bg-gradient-to-r from-[#1e347d] to-[#7686aa] relative">
+    <div id="home" className="md:w-full h-[100vh] md:min-h-[95vh] bg-gradient-to-r from-[#1e347d] to-[#7686aa] relative">
       {/* Content Layout */}
-      <div className="relative w-full h-auto min-h-[95vh] flex flex-col md:flex-row">
+      <div className="relative md:w-full h-auto min-h-[95vh] flex flex-col md:flex-row">
 
         {/* Left Side - Text Section */}
         <motion.div
