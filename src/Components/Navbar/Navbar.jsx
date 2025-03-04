@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
+import { Link } from "react-scroll"; // Import react-scroll
 import Flyradnewlogochanges3 from "../images/Logo/Flyradnewlogochanges3.svg";
 
 const Navbar = () => {
@@ -15,19 +16,6 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-
-      // Get all section elements
-      const sections = document.querySelectorAll("section");
-      let currentSection = "";
-
-      sections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top <= 100 && rect.bottom >= 100) {
-          currentSection = section.id;
-        }
-      });
-
-      setActiveSection(currentSection);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -56,15 +44,19 @@ const Navbar = () => {
             let sectionId = item.toLowerCase();
             if (item === "Contact") sectionId = "aviationform"; // Contact → AviationForm
             return (
-              <a
+              <Link
                 key={item}
-                href={`#${sectionId}`}
-                className={`px-4 py-2 text-white hover:text-white transition-all duration-300 rounded-md ${
+                to={sectionId}
+                smooth={true}
+                duration={500}
+                spy={true}
+                offset={-70} // Adjust this value based on your navbar height
+                className={`px-4 py-2 text-white hover:text-white transition-all duration-300 rounded-md cursor-pointer ${
                   activeSection === sectionId ? "bg-white text-[#1e347d] font-bold" : ""
                 }`}
               >
                 {item}
-              </a>
+              </Link>
             );
           })}
         </div>
@@ -100,16 +92,20 @@ const Navbar = () => {
             let sectionId = item.toLowerCase();
             if (item === "Contact") sectionId = "aviationform"; // Contact → AviationForm
             return (
-              <a
+              <Link
                 key={item}
+                to={sectionId}
+                smooth={true}
+                duration={500}
+                spy={true}
+                offset={-70} // Adjust based on navbar height
                 onClick={() => setIsOpen(false)} // Close menu on click
-                href={`#${sectionId}`}
-                className={`text-xl text-black hover:bg-[#1e347d] hover:text-white transition-all duration-300 px-6 py-3 rounded-md ${
+                className={`text-xl text-black hover:bg-[#1e347d] hover:text-white transition-all duration-300 px-6 py-3 rounded-md cursor-pointer ${
                   activeSection === sectionId ? "bg-[#1e347d] text-white font-bold" : ""
                 }`}
               >
                 {item}
-              </a>
+              </Link>
             );
           })}
         </div>

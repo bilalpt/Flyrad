@@ -130,7 +130,7 @@ export default function AviationForm() {
         <div className="text-sm">
           <p className="font-bold">Connect Us</p>
           <a href="tel:+919035465956" className="no-underline text-white hover:text-gray-300">
-            +91 9035465956
+            +91 9035465954
           </a>
 
           <p className="font-bold mt-2">Email:</p>
