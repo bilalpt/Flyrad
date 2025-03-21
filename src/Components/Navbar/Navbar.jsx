@@ -42,6 +42,7 @@ const Navbar = () => {
         <div className="hidden md:flex flex-1 justify-center space-x-6">
           {["Home", "About", "Services", "Contact"].map((item) => {
             let sectionId = item.toLowerCase();
+            if (item === "About") sectionId = "missionvision"; // Redirect About to Mission & Vision
             if (item === "Contact") sectionId = "aviationform"; // Contact → AviationForm
             return (
               <Link
@@ -50,7 +51,7 @@ const Navbar = () => {
                 smooth={true}
                 duration={500}
                 spy={true}
-                offset={-70} // Adjust this value based on your navbar height
+                offset={-70} // Adjust based on navbar height
                 className={`px-4 py-2 text-white hover:text-white transition-all duration-300 rounded-md cursor-pointer ${
                   activeSection === sectionId ? "bg-white text-[#1e347d] font-bold" : ""
                 }`}
@@ -90,6 +91,7 @@ const Navbar = () => {
         <div className="flex flex-col space-y-6 text-center">
           {["Home", "About", "Services", "Contact"].map((item) => {
             let sectionId = item.toLowerCase();
+            if (item === "About") sectionId = "missionvision"; // Redirect About to Mission & Vision
             if (item === "Contact") sectionId = "aviationform"; // Contact → AviationForm
             return (
               <Link

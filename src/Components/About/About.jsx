@@ -11,7 +11,7 @@ const About = () => {
   });
 
   return (
-    <div id="about"
+    <div 
       ref={ref}
       className="flex flex-col items-center text-center px-8 md:px-16 lg:px-24 py-12 bg-gradient-to-r to-[#1e347d] to-[#7686aa] text-white"
     >

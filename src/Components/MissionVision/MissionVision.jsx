@@ -8,7 +8,7 @@ const MissionVision = () => {
   };
 
   return (
-    <div className="bg-blue-50 min-h-screen flex items-center justify-center p-6">
+    <div id="about" className="bg-blue-50 min-h-screen flex items-center justify-center p-6 " >
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -21,7 +21,7 @@ const MissionVision = () => {
           className="bg-white p-8 rounded-lg shadow-lg"
           variants={fadeInUp}
         >
-          <div className="text-center">
+          <div className="text-center ">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-[#1e347d] to-[#7686aa] text-transparent bg-clip-text">
               Our Mission
             </h2>
