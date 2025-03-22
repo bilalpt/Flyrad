@@ -8,6 +8,7 @@ import Features from './Components/Features/Features';
 import MissionVision from './Components/MissionVision/MissionVision';
 import AviationForm from './Components/AviationForm/AviationForm';
 import FloatingButtons from './Components/FloatingButtons/FloatingButtons';
+import Blog from './Components/Blog/Blog';
 
 function App() {
   // Refs for each section
@@ -51,6 +52,8 @@ function App() {
       <section id="services" ref={servicesRef}>
         <Services />
       </section>
+      <Blog/>
+
 
       <section id="aviationform" ref={aviationFormRef}>
         <AviationForm />
