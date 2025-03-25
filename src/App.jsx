@@ -45,9 +45,9 @@ function Layout() {
             <section id="services">
               <Services />
             </section>
-            <section id="blog">
+            {/* <section id="blog">
               <Blog />
-            </section>
+            </section> */}
             <section id="aviationform">
               <AviationForm />
             </section>
