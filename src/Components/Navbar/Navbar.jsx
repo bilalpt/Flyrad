@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
-import { Link } from "react-scroll"; // Import react-scroll
+import { Link as ScrollLink } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom"; // Import Router Link
 import Flyradnewlogochanges3 from "../images/Logo/Flyradnewlogochanges3.svg";
 
 const Navbar = () => {
@@ -10,7 +11,7 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-    document.body.style.overflow = isOpen ? "auto" : "hidden"; // Prevent scrolling when menu is open
+    document.body.style.overflow = isOpen ? "auto" : "hidden";
   };
 
   useEffect(() => {
@@ -40,24 +41,31 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex flex-1 justify-center space-x-6">
-          {["Home", "About", "Services", "Contact"].map((item) => {
+          {["Home", "About", "Services", "Blog", "Contact"].map((item) => {
             let sectionId = item.toLowerCase();
-            if (item === "About") sectionId = "missionvision"; // Redirect About to Mission & Vision
-            if (item === "Contact") sectionId = "aviationform"; // Contact → AviationForm
-            return (
-              <Link
+            if (item === "About") sectionId = "missionvision";
+            if (item === "Contact") sectionId = "aviationform";
+
+            return item === "Blog" ? (
+              <RouterLink
+                key={item}
+                to="/blog"
+                className="px-4 py-2 text-white hover:text-white transition-all duration-300 rounded-md cursor-pointer"
+              >
+                {item}
+              </RouterLink>
+            ) : (
+              <ScrollLink
                 key={item}
                 to={sectionId}
                 smooth={true}
                 duration={500}
                 spy={true}
-                offset={-70} // Adjust based on navbar height
-                className={`px-4 py-2 text-white hover:text-white transition-all duration-300 rounded-md cursor-pointer ${
-                  activeSection === sectionId ? "bg-white text-[#1e347d] font-bold" : ""
-                }`}
+                offset={-70}
+                className="px-4 py-2 text-white hover:text-white transition-all duration-300 rounded-md cursor-pointer"
               >
                 {item}
-              </Link>
+              </ScrollLink>
             );
           })}
         </div>
@@ -89,25 +97,33 @@ const Navbar = () => {
         </button>
 
         <div className="flex flex-col space-y-6 text-center">
-          {["Home", "About", "Services", "Contact"].map((item) => {
+          {["Home", "About", "Services", "Blog", "Contact"].map((item) => {
             let sectionId = item.toLowerCase();
-            if (item === "About") sectionId = "missionvision"; // Redirect About to Mission & Vision
-            if (item === "Contact") sectionId = "aviationform"; // Contact → AviationForm
-            return (
-              <Link
+            if (item === "About") sectionId = "missionvision";
+            if (item === "Contact") sectionId = "aviationform";
+
+            return item === "Blog" ? (
+              <RouterLink
+                key={item}
+                to="/blog"
+                onClick={() => setIsOpen(false)}
+                className="text-xl text-black hover:bg-[#1e347d] hover:text-white transition-all duration-300 px-6 py-3 rounded-md cursor-pointer"
+              >
+                {item}
+              </RouterLink>
+            ) : (
+              <ScrollLink
                 key={item}
                 to={sectionId}
                 smooth={true}
                 duration={500}
                 spy={true}
-                offset={-70} // Adjust based on navbar height
-                onClick={() => setIsOpen(false)} // Close menu on click
-                className={`text-xl text-black hover:bg-[#1e347d] hover:text-white transition-all duration-300 px-6 py-3 rounded-md cursor-pointer ${
-                  activeSection === sectionId ? "bg-[#1e347d] text-white font-bold" : ""
-                }`}
+                offset={-70}
+                onClick={() => setIsOpen(false)}
+                className="text-xl text-black hover:bg-[#1e347d] hover:text-white transition-all duration-300 px-6 py-3 rounded-md cursor-pointer"
               >
                 {item}
-              </Link>
+              </ScrollLink>
             );
           })}
         </div>

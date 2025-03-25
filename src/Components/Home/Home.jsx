@@ -50,7 +50,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0, rotate: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <img src={homeflightimg2} alt="New Flight" className="w-full h-full object-cover" />
+            <img src={homeflightimg2} loading="lazy" alt="New Flight" className="w-full h-full object-cover" />
           </motion.div>
 
           <motion.div
@@ -59,7 +59,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0, rotate: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <img src={kimgflight} alt="Home Flight" className="w-full h-full object-cover" />
+            <img src={kimgflight} loading="lazy"  alt="Home Flight" className="w-full h-full object-cover" />
           </motion.div>
 
           <motion.div
@@ -68,7 +68,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0, rotate: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <img src={flightwithpiolet} alt="Flight with Pilot" className="w-full h-full object-cover" />
+            <img src={flightwithpiolet} loading="lazy" alt="Flight with Pilot" className="w-full h-full object-cover" />
           </motion.div>
 
         </div>
