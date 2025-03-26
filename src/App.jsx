@@ -45,16 +45,16 @@ function Layout() {
             <section id="services">
               <Services />
             </section>
-            {/* <section id="blog">
+            <section id="blog">
               <Blog />
-            </section> */}
+            </section>
             <section id="aviationform">
               <AviationForm />
             </section>
             <FloatingButtons />
           </>
         } />
-        <Route path="/blog" element={<Blogpage />} />
+        {/* <Route path="/blog" element={<Blogpage />} /> */}
         
         {/* Use PrivateRoute to protect the dashboard route */}
         <Route path="/dashboard/*" element={<PrivateRoute element={<Dashboard />} />} />
