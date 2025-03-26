@@ -59,7 +59,7 @@ const Blog = () => {
               {/* Side Story Title */}
               <h4 className="text-md font-semibold text-blue-700 mt-2">{blog.title}</h4>
               {/* Side Story Description */}
-              <p className="text-gray-600 text-sm">{blog.description}</p>
+              {/* <p className="text-gray-600 text-sm">{blog.description}</p> */}
               {/* Side Story Published Date */}
               <p className="text-gray-500 text-xs">
                 Published on: {new Date(blog.publishedDate).toLocaleDateString()}
