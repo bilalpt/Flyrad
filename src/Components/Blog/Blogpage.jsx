@@ -78,7 +78,7 @@ const BlogPage = () => {
   }, []);
 
   return (
-    <div className="container mx-auto px-4 md:px-12 lg:px-20 mt-10">
+    <div className="container mx-auto px-4 md:px-12 lg:px-20 mt-10 bg-gradient-to-r to-[#1e347d] to-[#7686aa]">
       {/* Breadcrumb */}
       <Breadcrumb currentPage="Blogs" />
 
@@ -86,9 +86,9 @@ const BlogPage = () => {
         Our Blogs
       </h2>
 
-      <div className="flex flex-col md:flex-row gap-6">
+      <div className="flex flex-col md:flex-row gap-6 ">
         {/* Main Blog Display */}
-        <div className="flex-1 bg-white shadow-md rounded-lg overflow-hidden">
+        <div className="flex-1 bg-white shadow-md rounded-lg overflow-hidden bg-gradient-to-r to-[#1e347d] to-[#7686aa]">
           {loading ? (
             <SkeletonLoader />
           ) : selectedBlog ? (
@@ -106,9 +106,9 @@ const BlogPage = () => {
                   {selectedBlog.title}
                 </h3>
                 <p className="text-[#333333] mt-2">{selectedBlog.description}</p>
-                <button className="mt-4 text-[#0088FF] font-medium hover:underline">
+                {/* <button className="mt-4 text-[#0088FF] font-medium hover:underline">
                   Read More
-                </button>
+                </button> */}
               </div>
             </>
           ) : (
@@ -125,7 +125,7 @@ const BlogPage = () => {
                   blog._id !== selectedBlog?._id && (
                     <div
                       key={blog._id}
-                      className="flex items-center gap-4 cursor-pointer p-3 rounded-lg hover:bg-[#F8F9FA]"
+                      className="flex items-center gap-4 cursor-pointer p-3 rounded-lg bg-gradient-to-r to-[#1e347d] to-[#7686aa] hover:bg-[#F8F9FA]"
                       onClick={() => setSelectedBlog(blog)}
                     >
                       <img
