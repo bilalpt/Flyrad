@@ -1,16 +1,32 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import kimgflight from "../images/flightimg/kimgflight.webp";
 import flightwithpiolet from "../images/flightimg/flightwithpiolet.jpg";
 import homeflightimg2 from "../images/flightimg/homeflightimg2.jpg";
-
 import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <div id="home" className="md:w-full h-[100vh] md:min-h-[95vh] bg-gradient-to-r from-[#1e347d] to-[#7686aa] relative">
+    <div
+      id="home"
+      className="md:w-full h-[100vh] md:min-h-[95vh] bg-gradient-to-r from-[#1e347d] to-[#7686aa] relative"
+    >
+      {/* Helmet for SEO */}
+      <Helmet>
+        <title>Explore the Sky with Flyrad | India’s Premier Aviation Portal</title>
+        <meta
+          name="description"
+          content="Flyrad connects aspiring aviation professionals with top-tier aviation schools, academies, and career opportunities across India."
+        />
+        <meta
+          name="keywords"
+          content="Flyrad, Aviation, Aviation Careers, Aviation Training, Pilot Training, India Aviation Portal"
+        />
+        <meta name="author" content="Flyrad" />
+      </Helmet>
+
       {/* Content Layout */}
       <div className="relative md:w-full h-auto min-h-[95vh] flex flex-col md:flex-row">
-
         {/* Left Side - Text Section */}
         <motion.div
           initial={{ x: -100, opacity: 0 }}
@@ -32,17 +48,17 @@ const Home = () => {
             </p>
             <button
               className="mt-6 md:mt-8 px-5 md:px-6 py-2 md:py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-100 transition"
-              onClick={() => document.getElementById("aviationform").scrollIntoView({ behavior: "smooth" })}
+              onClick={() =>
+                document.getElementById("aviationform").scrollIntoView({ behavior: "smooth" })
+              }
             >
               Connect Us
             </button>
-
           </div>
         </motion.div>
 
         {/* Right Side - Images */}
         <div className="w-full md:w-[50%] flex items-center justify-center relative mt-8 md:mt-32">
-
           {/* Image Cards */}
           <motion.div
             className="w-40 md:w-52 h-52 md:h-64 bg-white rounded-lg shadow-lg overflow-hidden absolute top-8 md:top-24 left-6 md:left-12 border-4 border-white"
@@ -50,7 +66,12 @@ const Home = () => {
             animate={{ opacity: 1, y: 0, rotate: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <img src={homeflightimg2} loading="lazy" alt="New Flight" className="w-full h-full object-cover" />
+            <img
+              src={homeflightimg2}
+              loading="lazy"
+              alt="New Flight"
+              className="w-full h-full object-cover"
+            />
           </motion.div>
 
           <motion.div
@@ -59,7 +80,12 @@ const Home = () => {
             animate={{ opacity: 1, y: 0, rotate: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <img src={kimgflight} loading="lazy"  alt="Home Flight" className="w-full h-full object-cover" />
+            <img
+              src={kimgflight}
+              loading="lazy"
+              alt="Home Flight"
+              className="w-full h-full object-cover"
+            />
           </motion.div>
 
           <motion.div
@@ -68,9 +94,13 @@ const Home = () => {
             animate={{ opacity: 1, y: 0, rotate: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <img src={flightwithpiolet} loading="lazy" alt="Flight with Pilot" className="w-full h-full object-cover" />
+            <img
+              src={flightwithpiolet}
+              loading="lazy"
+              alt="Flight with Pilot"
+              className="w-full h-full object-cover"
+            />
           </motion.div>
-
         </div>
       </div>
     </div>
