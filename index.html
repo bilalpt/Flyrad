@@ -1,47 +1,62 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/assets/flyradfavicorn.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flyrad.in - India's Largest Aviation Portal</title>
-    
-    <!-- Meta Description -->
-    <meta name="description" content="Flyrad.in is India's largest aviation portal, offering comprehensive services, bookings, and information for aviation enthusiasts and travelers alike. Stay updated with the latest in the aviation industry." />
-    
-    <!-- Open Graph Meta Tags for social media sharing -->
-    <meta property="og:title" content="Flyrad.in - India's Largest Aviation Portal" />
-    <meta property="og:description" content="Explore services, bookings, and stay updated with the latest trends in aviation." />
-    <meta property="og:image" content="/path/to/your-image.jpg" /> <!-- Update with an image URL -->
-    <meta property="og:url" content="https://flyrad.in" />
-    <meta property="og:type" content="website" />
 
-    <!-- Google Tag Manager -->
-    <script>
-      (function(w,d,s,l,i){
-        w[l]=w[l]||[];
-        w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-        var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),
-        dl=l!='dataLayer'?'&l='+l:'';
-        j.async=true;
-        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-        f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-PP8J3NQQ');
-    </script>
-    <!-- End Google Tag Manager -->
-    
-    <!-- Preconnect to improve performance -->
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-  </head>
-  <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP8J3NQQ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/src/assets/flyradfavicorn.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flyrad.in - India's Largest Aviation Portal</title>
 
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+  <!-- Meta Description -->
+  <meta name="description"
+    content="Flyrad.in is India's largest aviation portal, offering comprehensive services, bookings, and information for aviation enthusiasts and travelers alike. Stay updated with the latest in the aviation industry." />
+
+  <!-- Open Graph Meta Tags for social media sharing -->
+  <meta property="og:title" content="Flyrad.in - India's Largest Aviation Portal" />
+  <meta property="og:description"
+    content="Explore services, bookings, and stay updated with the latest trends in aviation." />
+  <meta property="og:image" content="/path/to/your-image.jpg" /> <!-- Update with an image URL -->
+  <meta property="og:url" content="https://flyrad.in" />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PP8J3NQQ');
+  </script>
+  <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BB2LNYJC9Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-BB2LNYJC9Q');
+  </script>
+
+  <!-- Preconnect to improve performance -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP8J3NQQ" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
