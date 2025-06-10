@@ -14,6 +14,8 @@ import Blog from "./Components/Blog/Blog";
 import Dashboard from "./Components/AdminDashboard/Dashboard/Dashboard";
 import AdminLoginPage from "./Components/AdminDashboard/AdminLoginPage";
 import PrivateRoute from "./Components/AdminDashboard/PrivateRoute";
+import PrivacyPolicy from "./Components/PrivacyandTearms/PrivacyPolicy";
+import TermsConditions from "./Components/PrivacyandTearms/TermsConditions";
 
 
 function Layout() {
@@ -55,6 +57,10 @@ function Layout() {
           </>
         } />
         <Route path="/blog" element={<Blogpage />} />
+        <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+        <Route path="/termsconditions" element={<TermsConditions />} />
+
+
         
         {/* Use PrivateRoute to protect the dashboard route */}
         <Route path="/dashboard/*" element={<PrivateRoute element={<Dashboard />} />} />

@@ -2,6 +2,8 @@ import { useState } from "react";
 import React from "react";
 import Flyradnewlogowhitechanges from '../images/Logo/Flyradnewlogowhitechanges.svg';
 
+import { Link } from "react-router-dom";
+
 export default function AviationForm() {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -105,40 +107,67 @@ export default function AviationForm() {
       </div>
 
       {/* Right Content - Show on Mobile with Adjusted Layout */}
-      <div className="md:w-1/2 flex flex-col items-center text-white space-y-4 p-6 text-center max-w-full">
+      <div className="md:w-1/2 flex flex-col items-center text-white p-6 text-center max-w-full space-y-6 bg-[#0A2A7D] rounded-xl shadow-lg">
+        {/* Logo */}
         <img
           src={Flyradnewlogowhitechanges}
           alt="Company Logo"
-          className="w-20 h-auto md:w-80 max-w-full"
+          className="w-28 md:w-48 h-auto"
         />
 
-        <div>
-          <h3 className="text-lg md:text-xl font-bold">FLYRAD.IN LTD</h3>
-          <p className="text-sm break-words">
+        {/* Company Info */}
+        <div className="space-y-2">
+          <h3 className="text-2xl font-bold tracking-wide">FLYRAD.IN LTD</h3>
+          <p className="text-sm leading-relaxed">
             <a
               href="https://www.google.com/maps/search/?q=Door+no+84,+3rd+cross,+near+Jyoti+Nivas+College+Road,+Koramangala+Industrial+Layout,+5th+Block,+Koramangala,+Bengaluru,+Karnataka+560095"
               target="_blank"
               rel="noopener noreferrer"
-              className="no-underline text-white hover:text-gray-300"
+              className="hover:text-gray-300 transition"
             >
-              Door no: 84, 3rd Cross, near Jyoti Nivas College Road, Koramangala Industrial Layout, <br />
-              5th Block, Koramangala, Bengaluru, Karnataka 560095
+              Door no: 84, 3rd Cross, near Jyoti Nivas College Road, <br />
+              Koramangala Industrial Layout, 5th Block, <br />
+              Koramangala, Bengaluru, Karnataka 560095
             </a>
           </p>
         </div>
 
-        <div className="text-sm">
-          <p className="font-bold">Connect Us</p>
-          <a href="tel:+919035465956" className="no-underline text-white hover:text-gray-300">
+        {/* Contact Info */}
+        <div className="text-sm space-y-2">
+          <p className="font-semibold">📞 Connect With Us:</p>
+          <a
+            href="tel:+919035465956"
+            className="block hover:text-gray-300 transition"
+          >
             +91 9035465954
           </a>
 
-          <p className="font-bold mt-2">Email:</p>
-          <a href="mailto:info@flyrad.in" className="no-underline text-white hover:text-gray-300">
+          <p className="font-semibold mt-2">📧 Email:</p>
+          <a
+            href="mailto:info@flyrad.in"
+            className="block hover:text-gray-300 transition"
+          >
             info@flyrad.in
           </a>
         </div>
+
+        {/* Policy Links */}
+        <div className="text-xs text-gray-400 space-y-1 pt-2 border-t border-gray-600 w-full mt-4">
+          <Link
+            to="/privacypolicy"
+            className="hover:underline block transition"
+          >
+            Privacy Policy
+          </Link>
+          <Link
+            to="/termsconditions"
+            className="hover:underline block transition"
+          >
+            Terms & Conditions
+          </Link>
+        </div>
       </div>
+
     </div>
   );
 }
