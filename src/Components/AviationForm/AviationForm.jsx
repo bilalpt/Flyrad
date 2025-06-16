@@ -1,6 +1,7 @@
 import { useState } from "react";
 import React from "react";
 import Flyradnewlogowhitechanges from '../images/Logo/Flyradnewlogowhitechanges.svg';
+import Flyradwhitelogo from '../../../public/Flyradwhitelogo.png'
 
 import { Link } from "react-router-dom";
 
@@ -110,7 +111,7 @@ export default function AviationForm() {
       <div className="md:w-1/2 flex flex-col items-center text-white p-6 text-center max-w-full space-y-6 bg-[#0A2A7D] rounded-xl shadow-lg">
         {/* Logo */}
         <img
-          src={Flyradnewlogowhitechanges}
+          src={Flyradwhitelogo}
           alt="Company Logo"
           className="w-28 md:w-48 h-auto"
         />

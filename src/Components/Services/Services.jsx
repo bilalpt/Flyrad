@@ -7,7 +7,7 @@ import admissionassistance from '../images/Services/admissionassistance.jpg';
 const services = [
     {
         title: "Expert Counseling",
-        description: `Not sure where to start your aviation journey? Flyrad, India’s largest aviation portal, offers expert career counselling to help you choose the right path in the aviation industry. Whether you aspire to be a pilot, cabin crew, aircraft engineer, or ground staff, our industry experts provide the guidance you need.
+        description: `Not sure where to start your aviation journey? Flyrad, India’s First aviation portal, offers expert career counselling to help you choose the right path in the aviation industry. Whether you aspire to be a pilot, cabin crew, aircraft engineer, or ground staff, our industry experts provide the guidance you need.
 
         ✅ Personalized Career Roadmap – Get expert advice based on your interests & qualifications.
         ✅ Course & Institute Selection – Choose the best aviation program tailored for you.
@@ -18,7 +18,7 @@ const services = [
     },
     {
         title: "Admission Assistance",
-        description: `Dreaming of an aviation career? Flyrad, India’s largest aviation portal, helps aspiring students secure admission to top aviation institutes across India and abroad. From pilot training to cabin crew programs, we guide you every step of the way!
+        description: `Dreaming of an aviation career? Flyrad, India’s First aviation portal, helps aspiring students secure admission to top aviation institutes across India and abroad. From pilot training to cabin crew programs, we guide you every step of the way!
         
         ✅ Top Aviation Institutes – Get admission to DGCA-approved and globally recognised institutes.
         ✅ Personalized Guidance – Expert counsellors help you choose the right course & college.
@@ -29,7 +29,7 @@ const services = [
     },
     {
         title: "Internship Opportunities",
-        description: `Would you be willing to gain hands-on experience in the aviation industry? Flyrad, India’s largest aviation portal, connects aspiring professionals with top-tier internship programs at leading airlines, airports, and aviation companies.
+        description: `Would you be willing to gain hands-on experience in the aviation industry? Flyrad, India’s First aviation portal, connects aspiring professionals with top-tier internship programs at leading airlines, airports, and aviation companies.
         
         ✅ Real-World Aviation Experience – Work with industry experts & gain practical knowledge.
         ✅ Certified Internship Programs – Get recognized certification to boost your resume.
@@ -39,7 +39,7 @@ const services = [
     },
     {
         title: "Guaranteed Job Placement",
-        description: `Looking for an aviation career? Flyrad, India’s largest aviation portal, ensures a smooth path to your dream job. With our exclusive industry partnerships, we provide:
+        description: `Looking for an aviation career? Flyrad, India’s First aviation portal, ensures a smooth path to your dream job. With our exclusive industry partnerships, we provide:
         
         ✅ 100% Verified Aviation Jobs – Direct tie-ups with airlines, airports, and aviation companies.
         ✅ Guaranteed Placement Support – Resume building, interview prep & career guidance.

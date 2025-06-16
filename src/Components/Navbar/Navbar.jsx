@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { Link as RouterLink, useNavigate, useLocation } from "react-router-dom";
-import Flyradnewlogochanges3 from "../images/Logo/Flyradnewlogochanges3.svg";
+// import Flyradnewlogochanges3 from "../images/Logo/Flyradnewlogochanges3.svg";
+import FlyradLogo from "../../../public/FlyradLogo.png";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +34,7 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center px-4 md:px-6 lg:px-24 py-2">
         {/* Logo */}
         <div className="flex-1 flex items-center">
-          <img src={Flyradnewlogochanges3} alt="Logo" className="h-10 md:h-16 object-cover" />
+          <img src={FlyradLogo} alt="Logo" className="h-10 md:h-16 object-cover" />
         </div>
 
         {/* Desktop Menu */}
