@@ -118,7 +118,7 @@ export default function AviationForm() {
 
         {/* Company Info */}
         <div className="space-y-2">
-          <h3 className="text-2xl font-bold tracking-wide">FLYRAD.IN LTD</h3>
+          {/* <h3 className="text-2xl font-bold tracking-wide">FLYRAD.IN LTD</h3> */}
           <p className="text-sm leading-relaxed">
             <a
               href="https://www.google.com/maps/search/?q=Door+no+84,+3rd+cross,+near+Jyoti+Nivas+College+Road,+Koramangala+Industrial+Layout,+5th+Block,+Koramangala,+Bengaluru,+Karnataka+560095"
