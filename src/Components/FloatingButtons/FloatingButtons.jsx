@@ -18,7 +18,7 @@ const FloatingButtons = () => {
 
                 {/* WhatsApp Button */}
                 <a
-                    href="https://wa.me/919035465956"
+                    href="https://wa.me/9035210936"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-14 h-14 flex items-center justify-center bg-green-500 text-white rounded-full shadow-lg"
@@ -28,7 +28,7 @@ const FloatingButtons = () => {
 
                 {/* Call Button */}
                 <a
-                    href="tel:+919035465956"
+                    href="tel:+9035210936"
                     className="w-14 h-14 flex items-center justify-center bg-blue-500 text-white rounded-full shadow-lg"
                 >
                     <FaPhone size={28} />
